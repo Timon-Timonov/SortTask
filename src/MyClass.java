@@ -8,15 +8,13 @@ public class MyClass implements SortingSolution {
     public void sortlt(SortedOutputSteram out, SortedInputstream... in) {
 
         Arrays.asList(in).forEach(this::getNextValue);
-        Long minKey;
-        minKey = getMinLongValue();
+        Long minKey = getMinLongValue();
 
         while (minKey != null) {
             out.write(minKey);
             map.remove(minKey).forEach(this::getNextValue);
             minKey = getMinLongValue();
         }
-        map.clear();
     }
 
     private Long getMinLongValue() {
