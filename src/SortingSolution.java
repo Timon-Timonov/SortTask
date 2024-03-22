@@ -1,3 +1,4 @@
 public interface SortingSolution {
-    void sortlt(SortedOutputSteram out,SortedInputstream ...in);
+
+    void sortlt(SortedOutputSteram out, SortedInputstream... in);
 }
